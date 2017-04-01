@@ -31,13 +31,13 @@
             clearInterval(refreshId);
             setScreen(false);
 
-            // Declare a proxy to reference the hub.
+           
             var chatHub = $.connection.chatHub;
             $.connection.hub.logging = true;
 
             registerClientMethods(chatHub);
 
-            // Start Hub
+             
             $.connection.hub.start().done(function () {
                 registerEvents(chatHub)
             });
